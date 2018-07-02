@@ -1,0 +1,26 @@
+p {
+  text-align: center;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+button {
+  margin-right: 8px;
+}
+
+.info-panel {
+  margin:20px 0px 8px 0px;
+  border: 2px dotted #e1e1e1;
+  height: 150px;
+}
+
+.info-panel p {
+  text-align: left;
+  margin: 6px;
+}

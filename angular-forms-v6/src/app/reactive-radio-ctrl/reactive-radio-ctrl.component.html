@@ -1,0 +1,10 @@
+<form [formGroup]="genderForm">
+  <label for="gender">Gender</label>
+  <div class="form-group">
+    <label for="gender">
+    <input class="form-control" type="radio" formControlName="gender" value="male">Male</label>
+    <label class="form-label" for="gender">
+    <input class="form-control" type="radio" formControlName="gender" value="female">Female</label>
+  </div>
+  <p>Form value: {{ genderForm.value | json }}</p>
+</form>

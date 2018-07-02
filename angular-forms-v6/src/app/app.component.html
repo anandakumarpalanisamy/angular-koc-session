@@ -1,0 +1,56 @@
+<div class="sidenav">
+  <a href="#Welcome" (click)="select('Welcome')">Home</a>
+  <a href="#ShowRadioControlExample" (click)="select('RadioControlExample')">Radio Buttons - Example</a>
+  <a href="#ShowCheckBoxControlExample" (click)="select('CheckBoxControlExample')">CheckBox Buttons - Example</a>
+  <a href="#ShowSelectBoxControlExample" (click)="select('SelectBoxControlExample')">Select Box - Example</a>
+  <a href="#TemplateVsReactiveForms" (click)="select('TemplateVsReactiveForms')">Template vs Reactive Forms</a>
+</div>
+<div class="app-container" *ngIf="showHome">
+  <p class="home-title">Angular Forms Module - Demo</p>
+  <div class="home-description">
+    Here you will be learning, how to work with various form controls
+    in Angular 2 with both the Template driven & Reactive forms.
+  </div>
+</div>
+<div class="app-container" *ngIf="showRadioControlExample">
+  <div class="container lft">
+    <h3>Template Driven - Form</h3>
+    <div class=form-container>
+      <app-template-radio-ctrl></app-template-radio-ctrl>
+    </div>
+  </div>
+  <div class="container rt">
+    <h3>Reactive/Model Driven - Form</h3>
+    <div class="form-container">
+      <app-reactive-radio-ctrl></app-reactive-radio-ctrl>
+    </div>
+  </div>
+</div>
+<div class="app-container" *ngIf="showCheckBoxControlExample">
+  <div class="container lft">
+    <h3>Template Driven - Form</h3>
+    <div class=form-container>
+      <app-template-checkbox-ctrl></app-template-checkbox-ctrl>
+    </div>
+  </div>
+  <div class="container rt">
+    <h3>Reactive/Model Driven - Form</h3>
+    <div class="form-container">
+      <app-reactive-checkbox-ctrl></app-reactive-checkbox-ctrl>
+    </div>
+  </div>
+</div>
+<div class="app-container" *ngIf="showTemplateVsReactiveForms">
+  <div class="container lft">
+    <h3>Template Driven - Form</h3>
+    <div class=form-container>
+      <app-template-form></app-template-form>
+    </div>
+  </div>
+  <div class="container rt">
+    <h3>Reactive/Model Driven - Form</h3>
+    <div class="form-container">
+      <app-reactive-form></app-reactive-form>
+    </div>
+  </div>
+</div>

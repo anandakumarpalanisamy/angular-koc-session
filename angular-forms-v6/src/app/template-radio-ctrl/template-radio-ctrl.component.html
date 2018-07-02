@@ -1,0 +1,10 @@
+<form #f="ngForm">
+  <label for="gender">Gender</label>
+  <div class="form-group">
+    <label for="gender">
+    <input class="form-control" type="radio" name="gender" [(ngModel)]="user.gender" value="male">Male</label>
+    <label class="form-label" for="gender">
+    <input class="form-control" type="radio" name="gender" [(ngModel)]="user.gender" value="female">Female</label>
+  </div>
+  <p>Form value: {{ f.value | json }}</p>
+</form>
