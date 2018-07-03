@@ -1,0 +1,19 @@
+<div>
+  <h5>Single Check box - Example</h5>
+  <form [formGroup]="form">
+    <div class="form-group">
+        <input type="checkbox" formControlName="rememberLogin">Remember Login
+    </div>
+    <p>Form value: {{ form.value | json }}</p>
+  </form>
+</div>
+
+<div style="margin-top: 50px;">
+  <h5>Multiple Check box - Example</h5>
+  <form [formGroup]="reactiveForm">
+    <div *ngFor="let category of _categories; let i = index" formArrayName="categories">
+      <input type="checkbox" [formControlName]="i"/>{{category.title}}
+    </div>
+  </form>
+  <p>Form value: {{ categories.value }}</p>
+</div>
