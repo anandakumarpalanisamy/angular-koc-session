@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class VersionParentComponent implements OnInit {
 
   major = 1;
-  minor = 20;
+  minor = 0;
 
   constructor() { }
 

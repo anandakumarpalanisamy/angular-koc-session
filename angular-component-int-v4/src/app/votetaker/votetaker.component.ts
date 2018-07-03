@@ -11,7 +11,9 @@ export class VotetakerComponent implements OnInit, OnDestroy {
   disagreed = 0;
   voters = ['Mr. IQ', 'Ms. Universe', 'Bombasto'];
 
-  constructor() { }
+  constructor() {
+    console.log('Inside VoterTakerComponent construcor');
+  }
 
   ngOnInit() {
     console.log('Inside VoterTakerComponent ngOnInit(...)');

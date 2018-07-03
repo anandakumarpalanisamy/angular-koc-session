@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-version-child',
@@ -17,7 +17,7 @@ export class VersionChildComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
 
-  ngOnChanges(changes: {[propKey: string]: SimpleChange}): void {
+  ngOnChanges(changes: {[propName: string]: SimpleChange}): void {
     const log: string[] = [];
     for (let propName in changes) {
       let changedProp = changes[propName];
