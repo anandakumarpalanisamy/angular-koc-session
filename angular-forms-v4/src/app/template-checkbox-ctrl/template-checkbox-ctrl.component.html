@@ -13,9 +13,10 @@
   <form #f2="ngForm">
     <div *ngFor="let category of categories;">
       <input type="checkbox"
-      [ngModelOptions]="{standalone: true}"
-      [(ngModel)]="category.selected"/> {{category.title}}
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="category.selected"/> {{category.title}}
     </div>
     <p>Form value: {{ selected | json }}</p>
+    <p>{{f2.form.controls }}</p>
   </form>
 </div>

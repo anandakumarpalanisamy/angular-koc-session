@@ -11,6 +11,7 @@ export class AppComponent {
   showRadioControlExample = false;
   showCheckBoxControlExample = false;
   showTemplateVsReactiveForms = false;
+  showProfileForm = false;
 
   // This is poor way to do this type of logic.... But, just setting-up this like below
   // for not introducing the Routing concept right now - and to save some time.
@@ -21,21 +22,31 @@ export class AppComponent {
       this.showRadioControlExample = false;
       this.showCheckBoxControlExample = false;
       this.showTemplateVsReactiveForms = true;
+      this.showProfileForm = true;
     } else if (title === 'RadioControlExample') {
       this.showHome = false;
       this.showRadioControlExample = true;
       this.showCheckBoxControlExample = false;
       this.showTemplateVsReactiveForms = false;
+      this.showProfileForm = true;
     } else if (title === 'CheckBoxControlExample') {
       this.showHome = false;
       this.showRadioControlExample = false;
       this.showCheckBoxControlExample = true;
       this.showTemplateVsReactiveForms = false;
+      this.showProfileForm = true;
+    } else if (title === 'ProfileForm') {
+      this.showHome = false;
+      this.showRadioControlExample = false;
+      this.showCheckBoxControlExample = false;
+      this.showTemplateVsReactiveForms = false;
+      this.showProfileForm = true;
     } else {
       this.showHome = true;
       this.showRadioControlExample = false;
       this.showCheckBoxControlExample = false;
       this.showTemplateVsReactiveForms = false;
+      this.showProfileForm = true;
     }
   }
 }

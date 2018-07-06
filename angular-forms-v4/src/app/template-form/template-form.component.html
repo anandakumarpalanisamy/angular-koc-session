@@ -3,7 +3,7 @@
   <form #heroForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name"
+      <input type="text" class="form-control"
         required
         minlength="4"
         appForbiddenName="bob"
@@ -26,11 +26,11 @@
       <label for="power">Hero Power</label>
       <select class="form-control" id="power"
         required
-        [(ngModel)]="hero.power" name="power"
-        #power="ngModel">
-        <option *ngFor="let pw of powers" [value]="pw">{{pw}}</option>
+        [(ngModel)]="hero.power" name="power" #power="ngModel" (change)="onChange()">
+        <option [ngValue]="null" disabled>Select</option>
+        <option *ngFor="let pw of powers" [ngValue]="pw">{{pw}}</option>
       </select>
-      <div [hidden]="power.valid || power.pristine"
+      <div *ngIf="!power.pristine && power.invalid"
         class="alert alert-danger">
         Power is required
       </div>
@@ -41,7 +41,7 @@
         [(ngModel)]="hero.alterEgo" name="alterEgo">
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="!heroForm.form.valid">Submit</button>
-    <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New</button>
+    <button type="button" class="btn btn-default" (click)="newHero(); heroForm.form.reset()">New</button>
   </form>
   <div class="info-panel">
       <p>Name via form.controls = {{ showFormControls(heroForm) }}</p>
@@ -68,3 +68,4 @@
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>
   </div>
 </div>
+

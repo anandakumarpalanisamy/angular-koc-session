@@ -10,6 +10,7 @@ import { TemplateRadioCtrlComponent } from './template-radio-ctrl/template-radio
 import { ReactiveRadioCtrlComponent } from './reactive-radio-ctrl/reactive-radio-ctrl.component';
 import { ReactiveCheckboxCtrlComponent } from './reactive-checkbox-ctrl/reactive-checkbox-ctrl.component';
 import { TemplateCheckboxCtrlComponent } from './template-checkbox-ctrl/template-checkbox-ctrl.component';
+import { ProfileComponent } from './profile-form/profile-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TemplateCheckboxCtrlComponent } from './template-checkbox-ctrl/template
     TemplateRadioCtrlComponent,
     ReactiveRadioCtrlComponent,
     ReactiveCheckboxCtrlComponent,
-    TemplateCheckboxCtrlComponent
+    TemplateCheckboxCtrlComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

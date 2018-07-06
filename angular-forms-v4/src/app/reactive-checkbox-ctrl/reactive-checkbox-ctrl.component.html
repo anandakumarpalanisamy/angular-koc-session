@@ -11,7 +11,8 @@
 <div style="margin-top: 50px;">
   <h5>Multiple Check box - Example</h5>
   <form [formGroup]="reactiveForm">
-    <div *ngFor="let category of _categories; let i = index" formArrayName="categories">
+    <div *ngFor="let category of _categories; let i = index"
+      formArrayName="categories">
       <input type="checkbox" [formControlName]="i"/>{{category.title}}
     </div>
   </form>

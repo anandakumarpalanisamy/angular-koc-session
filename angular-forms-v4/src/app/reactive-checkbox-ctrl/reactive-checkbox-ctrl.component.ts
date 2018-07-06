@@ -19,9 +19,12 @@ export class ReactiveCheckboxCtrlComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     const defaultCategory = { title: 'Cars', selected: true};
+    // Single Control form is created in a Verbose way
     this.form = new FormGroup({
       rememberLogin: new FormControl(false)
     });
+
+    // Multi Control form is created in a short hand way usinbg Form Builder API
     this.reactiveForm = this.fb.group({
       categories: this.fb.array(this._categories.map(category => defaultCategory.title === category.title))
     });

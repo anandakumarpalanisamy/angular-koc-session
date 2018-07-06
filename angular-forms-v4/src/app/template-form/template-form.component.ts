@@ -13,7 +13,7 @@ export class TemplateFormComponent implements OnInit {
   powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Change'];
 
-  hero = new Hero(1, 'Dr. IQ', this.powers[0], 'Chuck Overstreet');
+  hero = new Hero(1, 'Dr. IQ', null, 'CheakStreet');
 
   constructor() { }
 
@@ -31,6 +31,8 @@ export class TemplateFormComponent implements OnInit {
   get diagnostic() {
     return JSON.stringify(this.hero);
   }
+
+  onChange() {}
 
   showFormControls(form: any) {
     return form && form.controls['name']

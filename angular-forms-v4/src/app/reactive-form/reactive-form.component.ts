@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { forbiddenNameValidator } from '../shared/forbidden-name-directive';
 
 @Component({
@@ -19,7 +19,7 @@ export class ReactiveFormComponent implements OnInit {
 
   heroForm: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.heroForm = new FormGroup({
