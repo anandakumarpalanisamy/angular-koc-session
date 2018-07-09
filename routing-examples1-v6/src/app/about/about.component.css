@@ -1,0 +1,9 @@
+a {
+  margin: 8px;
+}
+
+.inner-outlet {
+  height: 300px;
+  margin: 8px;
+  border: 2px solid chocolate;
+}
