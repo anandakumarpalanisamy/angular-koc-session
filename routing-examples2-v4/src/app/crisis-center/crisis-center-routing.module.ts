@@ -10,6 +10,11 @@ import { CanDeactivateGuard } from '../guards/can-deactivate-guard.service';
 const crisisCenterRoutes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: CrisisCenterComponent,
     children: [
       {

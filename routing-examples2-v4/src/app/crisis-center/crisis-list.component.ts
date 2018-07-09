@@ -5,6 +5,7 @@ import { switchMap } from 'rxjs/operators';
 import { CrisisService, Crisis } from './crisis.service';
 
 @Component({
+  selector: 'app-crisis-list',
   template: `
     <ul class="items">
       <li *ngFor="let crisis of crises$ | async"

@@ -6,6 +6,7 @@ import { Crisis } from './crisis.service';
 import { DialogService } from '../services/dialog.service';
 
 @Component({
+  selector: 'app-crisis-detail',
   template: `
     <div *ngIf="crisis">
       <h3>"{{ editName }}"</h3>

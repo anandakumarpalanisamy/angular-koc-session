@@ -5,6 +5,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 
 @Component({
+  selector: 'app-hero-list',
   template: `
     <h2>HEROES</h2>
     <ul class="items">
@@ -33,7 +34,7 @@ export class HeroListComponent implements OnInit {
   ngOnInit(): void {
     this.heroes$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
-        this.selectedId = +params.get('id');
+        // this.selectedId = +params.get('id');
         return this.service.getHeroes();
       })
     );

@@ -5,6 +5,7 @@ import { HeroService, Hero } from './hero.service';
 import { switchMap } from 'rxjs/operators';
 
 @Component({
+  selector: 'app-hero-detail',
   template: `
     <h2>HEROES</h2>
     <div *ngIf="hero$ | async as hero">
